@@ -16,11 +16,7 @@ dx = L/(N-1)
 t = 0
 dt = 0.02
 
-# SWR
 SWR = (1+r)/(1-r)
-
-#scene = canvas(width=900, height=400)
-#scene.title = f"Transmission Line with Standing Wave Envelope"
 
 g = graph(title="Forward, Reflected, Total Waves, and Envelope for Total",
           xtitle="x",
@@ -33,7 +29,6 @@ forward_curve = gcurve(color=color.cyan)
 reflected_curve = gcurve(color=color.orange)
 total_curve = gcurve(color=color.red)
 env_pos_curve = gcurve(color=color.green)
-#env_neg_curve = gcurve(color=color.green)
 
 scene.append_to_caption("\n\nr: ")
 r_value_text = wtext(text=f"{r:.2f}  ")
@@ -77,6 +72,5 @@ while True:
         reflected_curve.plot(x, Vr)
         total_curve.plot(x, V)
         env_pos_curve.plot(x, env)
-        #env_neg_curve.plot(x, -env)
 
     t += dt
