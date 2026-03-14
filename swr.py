@@ -18,6 +18,10 @@ dt = 0.02
 
 SWR = (1+r)/(1-r)
 
+# Collapse the unused default 3D canvas so only the graph is shown.
+scene.width = 1
+scene.height = 1
+
 g = graph(title="Forward, Reflected, Total Waves, and Envelope for Total",
           xtitle="x",
           ytitle="Voltage",
